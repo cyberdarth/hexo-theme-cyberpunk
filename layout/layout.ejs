@@ -1,0 +1,21 @@
+<%- partial('_partial/head') %>
+<body>
+    <header class="site-header">
+        <h1>
+            <a class="site-logo" href="<%- url_for("/") %>"><%= config.title %></a>
+        </h1>
+
+        <div>
+            <% site.pages.each((page) => { %>
+                <a href="<%= page.permalink %>"><%= page.title %></a>
+            <% }) %>
+        </div>
+    </header>
+    
+    <main id="main">
+        <body><%- body %></body>
+    </main>
+
+    <%- partial('_partial/footer') %>
+</body>
+</html>

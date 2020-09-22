@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<head>
+<meta charset="UTF-8"><%
+var title = page.title;
+var author = config.author;
+%>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
+<meta title="author" content="<%= author %>">
+<%- css(['https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap', 'css/style.css']) %>
+</head>
